@@ -17,4 +17,5 @@ print("x is% 2d, y is% 3f, z is %s" % (x, round(y, 2), z))
 print("x is {a:2d},  y is {b:3f}, z is {c:s}".format(a = x, b =  round(y, 2), c = z))
 
 # Finally, print the same thing using an f-string
-print(f"x is {x}, y is {round(y, 2)}, z is {z}")
+# print(f"x is {x}, y is {round(y, 2)}, z is {z}")
+print(f"x is {x}, y is {y: .2f}, z is {z}")
