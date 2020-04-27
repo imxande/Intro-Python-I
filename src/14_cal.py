@@ -30,3 +30,30 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+prompt = input("Please enter month and year separated by a comma:")
+
+def calend(param):
+  dt = datetime.today()
+  current_year = dt.year
+  current_month = dt.month
+  
+
+  if not param:
+    print(calendar.month(current_year, current_month))
+
+  elif "," in prompt:
+  # need a way to make the user string into an array to access each argument
+    user_input = [i for i in prompt.split(',')]
+
+  # store each element of the array into its respective variables
+    input_month = int(user_input[0])
+    input_year = int(user_input[1])
+    print(calendar.month(input_year,input_month))
+  
+  else:
+    current_month = int(param)
+    print(calendar.month(current_year, current_month))
+
+calend(prompt)
+
